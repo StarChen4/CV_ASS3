@@ -164,8 +164,8 @@ hough4coins = HoughCircleTransform(image_coins_path)
 hough4smarties = HoughCircleTransform(image_smarties_path)
 
 # ========================  Task 1.2 ===========================
-coins_edges = hough4coins.canny_edge_detect(100,200)
-smarties_edges = hough4smarties.canny_edge_detect(100,200)
+coins_edges = hough4coins.canny_edge_detect(50,100)
+smarties_edges = hough4smarties.canny_edge_detect(20,40)
 
 # ========================  Task 1.3 ===========================
 # get edges and apply hough transform then show result
@@ -173,5 +173,5 @@ smarties_edges = hough4smarties.canny_edge_detect(100,200)
 # smarties_hough = hough4smarties.hough(smarties_edges, 10, 100, 5, 10, 0.6)
 
 # ========================  Task 1.4 ===========================
-coins_hough_nms = hough4coins.nms_hough(coins_edges, 10, 100, 5, 10, 0.6, 5)
-smarties_hough_nms = hough4smarties.nms_hough(smarties_edges, 10, 100, 5, 10, 0.6, 5)
+coins_hough_nms = hough4coins.nms_hough(coins_edges, 20, 70, 1, 2, 0.75, 10)
+smarties_hough_nms = hough4smarties.nms_hough(smarties_edges, 20, 60, 1, 2, 0.75, 10)

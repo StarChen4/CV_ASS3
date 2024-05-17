@@ -153,6 +153,7 @@ class HoughCircleTransform:
 
                 # If the differences are smaller than the threshold, suppress the circle with lower score
                 if abs(da) < nms_threshold and abs(db) < nms_threshold and abs(dr) < nms_threshold:
+                # if abs(da) < nms_threshold and abs(db) < nms_threshold and abs(dr) < nms_threshold:
                     suppressed[j] = True
 
         print(f"Number of circles after suppression: {len(circles[~suppressed])}")
